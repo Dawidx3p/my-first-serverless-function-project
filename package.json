@@ -17,6 +17,9 @@
     "url": "https://github.com/Dawidx3p/my-first-serverless-function-project/issues"
   },
   "homepage": "https://github.com/Dawidx3p/my-first-serverless-function-project#readme",
+  "dependencies": {
+    "node-fetch": "^3.2.0"
+  },
   "devDependencies": {
     "node-fetch": "^3.2.0"
   }
