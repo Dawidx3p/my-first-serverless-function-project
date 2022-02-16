@@ -1,15 +1,5 @@
-//import fetch from 'node-fetch';
+import fetch from 'node-fetch';
 
-exports.handler = async function(){
-    return{
-        statusCode: 200,
-        body: JSON.stringify({
-            message: 'Hello World!'
-        })
-    }
-}
-
-/*
 exports.handler = async function(){
     const POKE_API = 'https://pokeapi.co/api/v2/pokedex/kanto';
     const response = await fetch(POKE_API);
@@ -18,4 +8,4 @@ exports.handler = async function(){
         statusCode: 200,
         body: JSON.stringify(data)
     }
-}*/
+}
