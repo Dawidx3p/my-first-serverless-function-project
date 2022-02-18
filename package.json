@@ -17,13 +17,10 @@
     "url": "https://github.com/Dawidx3p/my-first-serverless-function-project/issues"
   },
   "homepage": "https://github.com/Dawidx3p/my-first-serverless-function-project#readme",
-  "dependencies": {
-    "node-fetch": "^3.2.0"
-  },
   "devDependencies": {
     "@babel/cli": "^7.17.3",
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
-    "node-fetch": "^3.2.0"
+    "node-fetch": "^2.6.7"
   }
 }
