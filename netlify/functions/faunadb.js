@@ -15,7 +15,9 @@ exports.handler = (event, context) => {
       q.Collection('test'),
       { data: { testField: 'testValue' } }
     )
-  ).catch((error) => {
+  )
+  .then(response => response.json())
+  .catch((error) => {
       console.log('error', error)
       return {
         statusCode: 400,
