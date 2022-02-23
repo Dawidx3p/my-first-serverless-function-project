@@ -13,6 +13,7 @@
     <button id="fetch-hoenn-btn">Fetch Hoenn pokedex</button>
     <button id="fetch-fauna-btn">Fetch Fauna</button>
     <button id="fetch-faunaTest-btn">Fetch All Tests</button>
+    <button id="delete-test-btn">Delete test</button>
     <p id="response-output">Response Placeholder</p>
 
     <script>
@@ -22,8 +23,17 @@
         const fetchHoennBtn = document.getElementById('fetch-hoenn-btn')
         const fetchFaunaBtn = document.getElementById('fetch-fauna-btn')
         const fetchFaunaTestBtn = document.getElementById('fetch-faunaTest-btn')
+        const deleteTestBtn = document.getElementById('delete-test-btn')
         const responseText = document.getElementById('response-output')
         
+        deleteTestBtn.addEventListener('click', async () => {
+          const response = await fetch(`/.netlify/functions/todos-delete/324368445788389969`, {
+            method: 'POST',
+          }).then(response => response.json())
+
+          responseText.innerText = JSON.stringify(response)
+        })
+
         fetchFaunaTestBtn.addEventListener('click', async () => {
           const response = await fetch('/.netlify/functions/faunaGetAll')
           .then(response => response.json())
