@@ -11,7 +11,7 @@ exports.handler = (event, context) => {
   }) 
   const id = getId(event.path)
   console.log(`Function 'todo-delete' invoked. delete id: ${id}`)
-  return client.query(q.Delete(q.Ref(`classes/todos/${id}`)))
+  return client.query(q.Delete(q.Ref(`classes/test/${id}`)))
     .then((response) => {
       console.log('success', response)
       return {
