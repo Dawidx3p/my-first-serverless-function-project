@@ -26,6 +26,21 @@
         const deleteTestBtn = document.getElementById('delete-test-btn')
         const responseText = document.getElementById('response-output')
         
+        updateTestBtn.addEventListener('click', async () => {
+          const data = {
+            crazyFrugo: 123,
+            someKinOfCraziness: 'lasagne',
+            faintedAt: false
+          }
+          const testId = '324368165716886095'
+          const response = await fetch(`/.netlify/functions/faunaUpdate/${testId}`, {
+            body: JSON.stringify(data),
+            method: 'POST'
+          }).then(response => response.json());
+
+          responseText.innerText = JSON.stringify(response)
+        })
+
         deleteTestBtn.addEventListener('click', async () => {
           const response = await fetch(`/.netlify/functions/faunaDelete/324368445788389969`, {
             method: 'POST',
