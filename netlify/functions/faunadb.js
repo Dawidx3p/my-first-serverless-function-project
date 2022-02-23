@@ -2,8 +2,6 @@
 const faunadb = require('faunadb')
 const q = faunadb.query
 
-console.log(process.env.FAUNADB_ADMIN_SECRET);
-
 exports.handler = (event, context) => {
   console.log('creating test data')
   /* configure faunaDB Client with our secret */
