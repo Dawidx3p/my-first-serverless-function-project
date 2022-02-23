@@ -16,7 +16,7 @@ exports.handler = (event, context) => {
       { data: { testField: 'testValue' } }
     )
   )
-  .then(response => response.json())
+  .then(response => JSON.parse(response))
   .catch((error) => {
       console.log('error', error)
       return {
