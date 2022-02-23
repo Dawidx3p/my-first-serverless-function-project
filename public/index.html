@@ -27,7 +27,7 @@
         const responseText = document.getElementById('response-output')
         
         deleteTestBtn.addEventListener('click', async () => {
-          const response = await fetch(`/.netlify/functions/todos-delete/324368445788389969`, {
+          const response = await fetch(`/.netlify/functions/faunaDelete/324368445788389969`, {
             method: 'POST',
           }).then(response => response.json())
 
